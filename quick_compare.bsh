@@ -1,0 +1,61 @@
+#! /bin/bash
+
+FILE=$1
+
+# a simple cache flusher. Provide one for your experiments, but
+# no need for a quick benchmark.
+function flush {
+  #./flushit $FILE > /dev/null;
+  echo "";
+}
+
+if [[ -z "$FILE" ]]
+then
+  echo "Please provide a dataset file name";
+  exit;
+fi
+
+if [ ! -e $FILE ]
+then
+  echo File $FILE does not exist;
+  exit 1;
+fi
+
+#standard string data structures, as typically implemented
+#in lecture notes and in computer science text books.
+
+echo "Make sure you run these experiments in single-user/console mode ... no gui, no other programs running, etc";
+
+#cache-conscious burst tries (2005) vs standard burst trie (2001)
+flush;
+./nikolas_askitis_array_burst_trie_exact 128 1 $FILE 1 $FILE
+
+flush;
+./nikolas_askitis_array_burst_trie_page 128 1 $FILE 1 $FILE
+
+#cache-conscious hash tables (2004) vs standard hash table .
+flush;
+./nikolas_askitis_array_hash_exact 1048576 1 $FILE 1 $FILE
+
+flush;
+./nikolas_askitis_array_hash_exact_mtf 1048576 1 $FILE 1 $FILE
+
+flush;
+./nikolas_askitis_array_hash_page 1048576 1 $FILE 1 $FILE
+
+flush;
+./standard-hash 1048576 1 $FILE 1 $FILE
+
+#cache-conscious binary search tree (2006)
+flush;
+./nikolas_askitis_array_bst 1 $FILE 1 $FILE
+
+#alternative standard-chain data structures
+flush;
+./standard-bst 1 $FILE 1 $FILE
+
+flush;
+./standard-redblack 1 $FILE 1 $FILE
+
+flush;
+./standard-splay 1 $FILE 1 $FILE

@@ -1,0 +1,26 @@
+/*******************************************************************************
+ * // Begin statement                                                          *
+ *                                                                             *
+ * Author:        Dr. Nikolas Askitis                                          *
+ * Email:         askitisn@gmail.com                                           *
+ * Github.com:    https://github.com/naskitis                                  *
+ *                                                                             *
+ * Copyright @ 2016.  All rights reserved.                                     *
+ *                                                                             *
+ * Permission to use my software is granted provided that this statement       *
+ * is retained.                                                                *
+ *                                                                             *
+ * My software is for non-commercial use only.                                 *
+ *                                                                             *
+ * If you want to share my software with others, please do so by               *
+ * sharing a link to my repository on github.com.                              *
+ *                                                                             *
+ * If you would like to use any part of my software in a commercial or public  *
+ * environment/product/service, please contact me first so that I may          *
+ * give you written permission.                                                *
+ *                                                                             *
+ * This program is distributed without any warranty; without even the          *
+ * implied warranty of merchantability or fitness for a particular purpose.    *
+ *                                                                             *
+ * // End statement                                                            *
+ ******************************************************************************/
